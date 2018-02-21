@@ -16,7 +16,7 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 api = tweepy.API(auth)
 i=0;
 
-f = open('##/twitterFile.txt', 'w', encoding='utf-8') ##ADD FILE PATH 
+f = open('C:/Users/##/Desktop/twitterFile.txt', 'w', encoding='utf-8') ##ADD USER FILE PATH 
 
 for res in tweepy.Cursor(api.search, q=("{}&since:{}&until:{}").format(SEARCH,FROM,TO), rpp=100, count=20, result_type="recent", include_entities=True, lang="en").items(num):
     i+=1
