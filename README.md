@@ -7,9 +7,9 @@ This project uses Python to pull data from Twitter and then analyzes the text fr
   - This script pulls data from Twitter based on a search string, a timeline (start data and end date), and number of tweets you want to recieve.
 
   - Read the requirements and details for this script below:
-    -Add your twitter API key in the script. You can generate one using https://apps.twitter.com/
-    -Run twitter.py , input the required details to generate the output file  
-    -The output file contains user name, time, tweet, retweet_count, and the followers for the user
+  -- Add your twitter API key in the script. You can generate one using https://apps.twitter.com/
+  -- Run twitter.py , input the required details to generate the output file  
+  -- The output file contains user name, time, tweet, retweet_count, and the followers for the user
   
 - - - - - - - - - - - 
 Run the functions below after pulling the data from Twitter in the above script
