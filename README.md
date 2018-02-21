@@ -18,17 +18,17 @@ This script pulls data from Twitter based on a search string, a timeline (start 
 maxTweetsPerTimeline.py //
 This function finds the top n users who have tweeted the most for the entire timeline.
 
-- -
+- - - - - - - - - - - 
 
 maxTweetsPerHour.py //
 This function finds the top n users who have tweeted the most for every hour.
 
-- - 
+- - - - - - - - - - - 
 
 maxRetweets //
 This function finds the top n users who have the maximum followers.
 
-- - 
+- - - - - - - - - - - 
 
 maxFollowers // 
 This function finds the top n tweets which have the maximum retweet count.
