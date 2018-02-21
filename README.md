@@ -3,8 +3,8 @@ This project uses Python to pull data from Twitter and then analyzes the text fr
 
 - - - - - - - - - - - 
 
-TwitterCapture.py //
-This script pulls data from Twitter based on a search string, a timeline (start data and end date), and number of tweets you want to recieve.
+- TwitterCapture.py //
+  - This script pulls data from Twitter based on a search string, a timeline (start data and end date), and number of tweets you want to recieve.
 
 - Read the requirements and details for this script below:
   - Add your twitter API key in the script. You can generate one using https://apps.twitter.com/
