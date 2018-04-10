@@ -1,27 +1,40 @@
 import string
 import operator
 import sys
+import csv
 
 def mostTweetsPerTimeline():
-    INPUTFILE = input("Enter the file path: ")
-    INPUT_FILE_PATH = 'C:/Users/##/Desktop/' + INPUTFILE + '.txt' ##ADD USER FILE PATH
-
-    with open (INPUT_FILE_PATH, encoding = "latin-1") as myFile:
-        twitter=myFile.readlines()
-    l = {}
-    for dat in twitter:
-       
-        fileTemp = dat.split()
-        if fileTemp[0] in l:
-            l[fileTemp[0]] +=1
-        else:
-            l[fileTemp[0]] = 1
-    l = sorted(l.items(), key = operator.itemgetter(1), reverse = True)
- 
-    outputFile = open('C:/Users/##/Desktop/mostTweetsPerTimeline.txt', 'w', encoding = "utf-8") ##ADD USER FILE PATH
-    outputFile.write("The top 10 users who have tweeted the most for the entire timeline: \n")
-    for i in range (0,10):
-        outputFile.write("The user " + l[i][0] + " tweeted " + str(l[i][1]) + " times" + "\n")
+    FilePath = 'C:/Users/Alex Nelson/Desktop/twitterData.txt' 
+    output = []
+    with open (FilePath, encoding = "latin-1") as twitterFile:
+        tweets = twitterFile.readlines()
+          
+    
+    for tweet in tweets:
+        tweetInfo = tweet.split(' ')
+        usernames = tweetInfo[0]
+        output.append(usernames)
         
-    outputFile.close
+    
+    users = []
+    for user in output:
+        if user not in users:
+            users.append(user)
+            
+    mostTweets = []
+    for i in users:
+        count = output.count(i)
+        list = (i,count)
+        mostTweets.append(list)
+        
+        
+    sortedList = sorted(mostTweets, key=lambda tup:(tup[1]), reverse = True)
+    maxTen = (sortedList[:10])
+    
+    maxTweetsFile = open('C:/Users/Alex Nelson/Desktop/mostTweetsPerTimeline.csv', 'w')  
+    with maxTweetsFile:  
+        writer = csv.writer(maxTweetsFile)
+        for row in maxTen:
+            writer.writerow(row)
+
 mostTweetsPerTimeline()
