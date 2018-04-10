@@ -24,8 +24,8 @@ Run the functions below after pulling the data from Twitter in the above script
 
 
 - maxRetweets //
-  - This function finds the top n users who have the maximum followers.
+  - This function finds the top n tweets which have the maximum retweet count.
 
 
 - maxFollowers // 
-  - This function finds the top n tweets which have the maximum retweet count.
+  - This function finds the top n users who have the maximum followers.
